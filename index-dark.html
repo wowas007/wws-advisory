@@ -7,41 +7,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-  :root{--bg:#fafafa;--fg:#1d1d1f;--muted:#86868b;--link:#424245;--sans:'Albert Sans',system-ui,sans-serif}
+  :root{--bg:#1e2a3a;--fg:#e8eaed;--muted:rgba(255,255,255,0.5);--link:rgba(255,255,255,0.65);--accent:#fff;--sans:'Albert Sans',system-ui,sans-serif}
 
   body{background:var(--bg);color:var(--fg);font-family:var(--sans);min-height:100dvh;display:flex;align-items:flex-end;padding:clamp(2rem,5vw,4rem);position:relative}
 
   .lang{position:fixed;top:clamp(1.5rem,3vw,2.5rem);right:clamp(2rem,5vw,4rem);display:flex;gap:.1rem;font-size:.65rem;font-weight:400;letter-spacing:.04em;z-index:10}
   .lang button{background:none;border:none;font-family:var(--sans);font-size:.65rem;color:var(--muted);padding:.35rem .5rem;border-radius:4px;cursor:pointer;transition:color .2s;letter-spacing:.04em}
-  .lang button:hover{color:var(--fg)}
-  .lang button.active{color:var(--fg);font-weight:600}
+  .lang button:hover{color:var(--accent)}
+  .lang button.active{color:var(--accent);font-weight:600}
 
   .main{max-width:480px;animation:up .8s cubic-bezier(.25,1,.5,1) both}
   @keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 
   .brand{font-size:clamp(2rem,5vw,2.8rem);letter-spacing:-.04em;line-height:1;margin-bottom:.2em}
-  .brand b{font-weight:600}
+  .brand b{font-weight:600;color:var(--accent)}
   .brand span{font-weight:300;color:var(--muted)}
   .legal{font-size:.7rem;font-weight:400;color:var(--muted);letter-spacing:.08em;margin-bottom:clamp(2rem,4vw,3.5rem)}
 
-  .lines{font-weight:300;font-size:.95rem;line-height:2;margin-bottom:2.5rem;padding-left:1.1rem;border-left:1.5px solid var(--fg);transition:opacity .25s}
+  .lines{font-weight:300;font-size:.95rem;line-height:2;margin-bottom:2.5rem;padding-left:1.1rem;border-left:1.5px solid var(--link);transition:opacity .25s}
 
-  .name{font-size:.85rem;font-weight:600;letter-spacing:.01em;margin-bottom:.15rem}
+  .name{font-size:.85rem;font-weight:600;letter-spacing:.01em;margin-bottom:.15rem;color:var(--accent)}
   .title{font-size:.75rem;font-weight:300;color:var(--muted);margin-bottom:2rem;transition:opacity .25s}
 
   .web{display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem;font-weight:400;color:var(--link);text-decoration:none;margin-bottom:2rem;transition:color .2s}
-  .web:hover{color:var(--fg)}
+  .web:hover{color:var(--accent)}
   .web svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
   .web:hover svg{transform:translateX(2px)}
 
   .soc{display:flex;gap:1.25rem;align-items:center}
   .soc a{color:var(--muted);transition:color .25s;display:flex}
-  .soc a:hover{color:var(--fg)}
+  .soc a:hover{color:var(--accent)}
   .soc svg{width:18px;height:18px;fill:currentColor}
 
   .foot{position:fixed;bottom:clamp(1.5rem,3vw,2.5rem);right:clamp(2rem,5vw,4rem);display:flex;gap:1.5rem;font-size:.65rem}
   .foot a{color:var(--muted);text-decoration:none;transition:color .2s}
-  .foot a:hover{color:var(--fg)}
+  .foot a:hover{color:var(--accent)}
 
   @media(max-width:600px){
     body{align-items:center;padding:2rem 1.5rem;padding-top:4rem;flex-direction:column;justify-content:center}
