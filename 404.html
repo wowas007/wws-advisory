@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weiterleitung – WWS Advisory GmbH</title>
+<script>
+  // 404-Fallback: Pfad mitnehmen, Sprache als ?lang=de anhaengen wenn nicht schon vorhanden
+  const path = window.location.pathname;
+  const search = window.location.search;
+  let target;
+  if (path === '/' || path === '/index.html' || path === '') {
+    target = "https://wwsadvisory.com/?lang=de" + (search ? '&' + search.slice(1) : '');
+  } else {
+    // Bekannter Pfad (z.B. /impressum.html, /datenschutz.html) - direkt durchreichen
+    target = "https://wwsadvisory.com" + path + search;
+  }
+  window.location.replace(target + window.location.hash);
+</script>
+<style>
+  body{margin:0;padding:2rem;font-family:system-ui,sans-serif;color:#1d1d1f;background:#fafafa;text-align:center}
+  a{color:#424245}
+</style>
+</head>
+<body>
+<p>Diese Seite ist umgezogen.<br>Sie werden weitergeleitet zu <a href="https://wwsadvisory.com/">wwsadvisory.com</a>.</p>
+</body>
+</html>
